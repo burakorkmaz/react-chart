@@ -1,17 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import App from "./App"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
+ReactDOM.render(
+  <App />,
+  document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+var e = document.getElementsByClassName("highcharts-series-1")[0];
+var child = e.lastElementChild;  
+while (child) { 
+    e.removeChild(child); 
+    child = e.lastElementChild; 
+} 
+
+var b = document.getElementsByClassName("highcharts-series-2")[0];
+var child2 = b.lastElementChild;  
+while (child2) { 
+    b.removeChild(child2); 
+    child2 = b.lastElementChild; 
+} 
